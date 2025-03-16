@@ -22,13 +22,15 @@ public class ThreadVetor extends Thread{
 				for (int i = 0 ; i < vetor.length; i++) {}
 			double Tf0 = System.nanoTime();
 			double TT0 = (Tf0 - TI0)/(Math.pow(10, 9));
-			System.out.println(" Valor numérico par: \n vetor percorrido com for\n tempo total: "+ TT0 + " .s");
+			System.out.println(" Valor numérico par: \n vetor percorrido com <for> \n tempo total: "+ TT0 + " seg");
+			System.out.println("===================================");
 		}else {
 			double TI0 = System.nanoTime();
 				for (int i : vetor) {}
 			double Tf0 = System.nanoTime();
-			double TT0 = (Tf0 - TI0)/(Math.pow(10, 9));
-			System.out.println(" Valor numérico par: \n vetor percorrido com for\n tempo total: "+ TT0 + " .s");
+			double TT0 = ((Tf0 - TI0)/(Math.pow(10, 9)));
+			System.out.println(" Valor numérico impar: \n vetor percorrido com <foreach> \n tempo total: "+ TT0 + " seg");
+			System.out.println("===================================");
 		}
 	}
 }
